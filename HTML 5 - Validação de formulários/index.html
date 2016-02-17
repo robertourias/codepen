@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML 5 - Validação de formulários</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <form>
+      <div>
+          Email:
+          <input type="email" name="email" required="required" placeholder="Informe seu nome!" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" />
+      </div>
+
+      <div>
+          Nome:
+          <input type="text" name="nome" required="required" placeholder="Informe seu e-mail!" pattern="[A-Za-z-0-9]+\s[A-Za-z-'0-9]+"/>
+      </div>
+
+      <div>
+          <input type="submit" value="Enviar" />
+      </div>
+  </form>
+</body>
+</html>
