@@ -1,0 +1,14 @@
+.row{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    display:table;
+    border: 1px solid #666;
+}
+
+.col {
+    position: relative;
+    display: table-cell;
+    vertical-align:middle;
+    text-align:center;
+}
