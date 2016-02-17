@@ -1,0 +1,11 @@
+/* Referência https://developer.mozilla.org/pt-BR/docs/Web/CSS/text-overflow */
+.cortar {
+    width:200px;
+    height:20px;
+    padding:20px;
+    border:1px solid blue;
+    /* Responsável pelo efeito de texto limitado */
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    overflow:hidden;
+}
