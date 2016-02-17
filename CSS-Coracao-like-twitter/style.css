@@ -16,7 +16,7 @@
 }
 
 [type="checkbox"]:checked + .tw-heart {
-  transition: background .8s steps(28);
+  transition: background .8s steps(28); /* 28 é o número de imagens no sprite*/
   background-position: -2800px 0;
 }
 
