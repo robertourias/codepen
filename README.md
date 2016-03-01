@@ -4,6 +4,7 @@
 | Categoria | Nome | Descrição | Ref |
 | --- | --- | --- | :---: |
 | CSS | Alinhamento vertical | Alinhamento vertical no CSS | [Codepen](http://codepen.io/robertourias/pen/MaYpGY) |
+| CSS | Alinhamento vertical com flexbox | Alinhamento vertical no CSS | [Codepen](http://codepen.io/robertourias/pen/RaNBXP) |
 | CSS | Men Mobile | Menu slide com transtion css | [Codepen](http://codepen.io/robertourias/pen/KdwWoO) |
 | CSS | Coração do like Twitter | Usando o valor steps do transition | [JSFiddle](http://jsfiddle.net/tableless/jk7zvh26/?utm_source=website&utm_medium=embed&utm_campaign=jk7zvh26) |
 | CSS | Navegação entre abas | Navegação sem javascript | [Codepen](http://codepen.io/robertourias/pen/BoyWxv) |
