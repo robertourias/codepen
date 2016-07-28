@@ -1,0 +1,167 @@
+.container {
+  margin: 20px auto;
+  max-width: 1200px;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 20px;
+}
+
+.green .column{
+  background: green;
+}
+
+.blue .column{
+  background: blue;
+}
+
+.orange .column{
+  background: orange;
+}
+
+/* Desconsidera o padding, margin, border das dimensões  */
+.row,
+.column {
+  box-sizing: border-box;
+}
+
+/*
+Limpando Floats
+A fim de alinhar as colunas horizontalmente, sistemas de grid irão flutuar as colunas.
+Isso significa que você precisa limpar os elementos que flutuam sobre a linha para manter
+a estrutura do layout. Aqui é onde o clearfix entra:
+*/
+.row:before,
+.row:after {
+  content: " ";
+  display: table;
+}
+
+.row:after {
+  clear: both;
+}
+
+/*
+Definindo Colunas
+Para as colunas, os estilos precisam ser definidos em duas partes: os estilos em comum e as larguras. Primeiro os comuns:
+*/
+.column {
+  position: relative;
+  float: left;
+}
+
+/*
+Criando Gutters  (calhas)
+Gutters ajudam criar a separação entre as colunas para uma maior legibilidade e estética.
+Existem dois tipos de abordagem quando falamos em gutters; definindo paddings dentro de cada
+coluna ou margem esquerda baseada em porcentagens para cada coluna.
+Isso irá criar uma margem esquerda para cada coluna, exceto a primeira, que nós vamos definir
+em 1.6% usando a propriedade margin-left:
+*/
+.column + .column {
+  margin-left: 1.6%;
+}
+
+/*
+Calculando Largura das Colunas
+
+Nota do tradutor: Para calcular a porcentagem das margens:
+mr = mp / mc
+Onde:
+mr = margem em porcentagem
+mp = margem em pixel
+mc = máximo de colunas
+
+Uma escolha popular são 12, uma vez que existe uma maior flexibilidade já que é divisível por 1,2,3,4 e 6.
+scw = (100 – (m * (mc – 1))) / mc
+Onde:
+scw = largura da coluna única
+m = margin (1.6%)
+mc = máximo de colunas (12)
+
+Quando resolvemos a fórmula, temos uma única coluna de largura 6.86666666667%. A partir daqui, podemos usar
+esse número para calcular as larguras das colunas restantes. A fórmula para isso é:
+cw = (scw * cs) + (m * (cs – 1))
+Onde:
+cw = largura da coluna
+scw = largura da coluna única (6.86666666667%)
+cs = column span (1-12)
+m = margin (1.6%)
+*/
+.column-1 {
+  width: 6.86666666667%;
+}
+
+.column-2 {
+  width: 15.3333333333%;
+}
+
+.column-3 {
+  width: 23.8%;
+}
+
+.column-4 {
+  width: 32.2666666667%;
+}
+
+.column-5 {
+  width: 40.7333333333%;
+}
+
+.column-6 {
+  width: 49.2%;
+}
+
+.column-7 {
+  width: 57.6666666667%;
+}
+
+.column-8 {
+  width: 66.1333333333%;
+}
+
+.column-9 {
+  width: 74.6%;
+}
+
+.column-10 {
+  width: 83.0666666667%;
+}
+
+.column-11 {
+  width: 91.5333333333%;
+}
+
+.column-12 {
+  width: 100%;
+}
+
+/*
+Otimizando para Dispositivos Móveis
+Apesar do fato que o sistema de grid é responsivo, ele sozinho não pode ir tão longe.
+Para dispositivos com pequenas telas, tais como smartphones, a largura das colunas
+precisam se ajustar para permitir que o conteúdo que elas contêm ainda apareça legível
+e visualmente atraente. Consultas de mídia ajudam com isso:
+*/
+@media only screen and (max-width: 550px) {
+  .column-1,
+  .column-2,
+  .column-3,
+  .column-4,
+  .column-5,
+  .column-6,
+  .column-7,
+  .column-8,
+  .column-9,
+  .column-10,
+  .column-11,
+  .column-12 {
+    width: auto;
+    float: none;
+  }
+
+  .column + .column {
+    margin-left: 0;
+  }
+}
