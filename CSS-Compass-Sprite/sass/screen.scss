@@ -1,0 +1,36 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "sprites/*.png";
+
+
+.sprite-bluefish {
+  @include sprites-sprite("Bluefish");
+  display: inline-block;
+  width: 300px;
+  height: 279px;
+}
+
+.sprite-cielo {
+  @include sprites-sprite("cielo");
+  display: inline-block;
+  width: 200px;
+  height: 66px;
+}
+
+.sprite-sbt {
+  @include sprites-sprite("SBT");
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+}
+
+.sprite-lg {
+  @include sprites-sprite("lg");
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+}
