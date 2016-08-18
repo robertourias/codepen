@@ -1,38 +1,30 @@
+// Framework Materializecss com Google Material Design: ;
+@import "sass/materialize";
 
-@import "sass/materialize.scss";
+// Algumas convenções
+// o-: Objeto
+// c-: Componente
+// u-: utilitario
+// t-: tema
+// s-: escopo
+// is/has: estados
+// _: hacks (!)
+// js-: Javascript
+// qa-: quality assurance (selenium
 
-// ITCSS - Inverted Triangle CSS
+// SMACSS
 
-// Utilizando um pré-processador de CSS, essa camada inicial tem todo o controle de
-// variáveis ​​globais e configuração do projeto (cores, tamanhos de tela).
-@import "itcss/_settings.scss";
-@import "itcss";
+// Base
+@import "sass/smacss/base";
 
-// Nessa camada usamos a grande utilidade de um pré-processado de CSS, que são as funções e mixins.
-@import "itcss/_tools.scss";
+// Layout
+@import "sass/smacss/layout";
 
-// Box-sizing, reset, modernizr se encontram nessa camada.
-//   Normalize.css........A level playing field.
-//   Box-sizing...........Better default `box-sizing`
-@import "itcss/_generic.scss";
+// Modulo
+@import "sass/smacss/module";
 
-// Estilos que são aplicados nas tags HTML (estilização básica).
-//   Headings.............H1–H6 styles
-@import "itcss/_base.scss";
+// Estado
+@import "sass/smacss/state";
 
-// Seguindo o conceito de orientação a objeto CSS, nessa camada usamos as classes para os objetos que se
-// repetem no projeto. A partir dessa camada que começamos a utilizar as classes CSS.
-//   Wrappers.............Wrapping and constraining elements
-@import "itcss/_objects.scss";
-
-// Elementos de interface com contexto específico
-//   Page-head............The main page header.
-//   Page-foot............The main page footer.
-//   Buttons..............Button elements.
-@import "itcss/_components.scss";
-
-// Como está bem sugestivo, seria a camada onde teremos os temas do projeto / componentes / objetos.
-@import "itcss/_theme.scss";
-
-// Especificidade mais alta, ajudantes e substituições (.col-ms-12 {})
-@import "itcss/_trumps.scss";
+// Tema
+@import "sass/smacss/theme";
