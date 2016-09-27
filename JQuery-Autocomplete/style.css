@@ -1,0 +1,27 @@
+/*
+Resultado gerado do autocomplete
+
+<div class="autocomplete-suggestions">
+    <div class="autocomplete-suggestion autocomplete-selected"> {AAA} </div>
+    <div class="autocomplete-suggestion"> {BBB} </div>
+    <div class="autocomplete-suggestion"> {CCC} </div>
+</div>
+*/
+
+.container {
+    width: 80%;
+    margin: 30px auto;
+}
+
+.autocomplete-suggestions {
+    border: 1px solid #ccc;
+    overflow-y: auto;
+}
+
+.autocomplete-suggestion {
+    padding: 6px 12px;
+}
+
+.autocomplete-suggestion:hover {
+    background: #ccc;
+}
