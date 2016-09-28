@@ -15,7 +15,7 @@ $(function(){
         { value: 'Zimbabwe', data: 'ZZ' }
     ];
 
-    var countries = [
+    var countries_sigle = [
         { value: 'Andorra'},
         { value: 'Afeganistão'},
         { value: 'Africa do Sul'},

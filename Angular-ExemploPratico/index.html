@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Angular - Exemplo Prático</title>
+</head>
+<body>
+    <div class="container">
+        <input type="text" ng-model="nome">
+        <p>Olá, Tableless! Meu nome é: {{ nome }}</p>
+
+        <textarea name="texto" id="texto" cols="30" rows="10" ng-model="textoextenso"></textarea>
+        <p>{{ textoextenso }}</p>
+
+        <div ng-controller="ListaComprasController">
+            <form class="form-inline" name="formItem">
+                <input type="text" ng-model="item.produto">
+                <input type="number" ng-model="item.quantidade">
+                <button ng-click="adicionaItem()">adicionar ítem</button>
+            </form>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Produto</th>
+                        <th>Quantidade</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="item in itens">
+                        <td><strong>{{ item.produto }}</strong></td>
+                        <td align="center">{{ item.quantidade }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="angular.min.js"></script>
+    <script src="init.js"></script>
+</body>
+</html>
