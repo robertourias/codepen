@@ -24,13 +24,17 @@
 .container {
   width: 200px;
   height: 200px;
+  margin: 100px auto;
   position: relative;
   perspective: 1000px; }
   .container #cube {
+    -webkit-transition: all .5s;
+    transition: all .5s;
     width: 100%;
     height: 100%;
     position: absolute;
-    transform-style: preserve-3d; }
+    transform-style: preserve-3d;
+    transform: rotateY(0) translateZ(0); }
     .container #cube figure {
       margin: 0;
       width: 196px;
@@ -38,17 +42,21 @@
       display: block;
       position: absolute;
       border: 2px solid black; }
-  .container #cube .front {
-    transform: rotateY(0deg) translateZ(100px); }
-  .container #cube .back {
-    transform: rotateX(180deg) translateZ(100px); }
-  .container #cube .right {
-    transform: rotateY(90deg) translateZ(100px); }
-  .container #cube .left {
-    transform: rotateY(-90deg) translateZ(100px); }
-  .container #cube .top {
-    transform: rotateX(90deg) translateZ(100px); }
-  .container #cube .bottom {
-    transform: rotateX(-90deg) translateZ(100px); }
+    .container #cube.vertical .front {
+      transform: rotateY(0deg) translateZ(100px);
+      background-color: #4db6ac; }
+    .container #cube.vertical .bottom {
+      transform: rotateX(-90deg) translateZ(100px);
+      background-color: #ffb74d; }
+    .container #cube.vertical:hover {
+      transform: rotateX(90deg) translateZ(0); }
+    .container #cube.horizontal .front {
+      transform: rotateY(0deg) translateZ(100px);
+      background-color: #ce93d8; }
+    .container #cube.horizontal .right {
+      transform: rotateY(90deg) translateZ(100px);
+      background-color: #4db6ac; }
+    .container #cube.horizontal:hover {
+      transform: rotateY(-90deg) translateZ(0); }
 
 /*# sourceMappingURL=style.css.map */
