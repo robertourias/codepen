@@ -255,7 +255,7 @@
                     <h3>Hover</h3>
                     <code>
                     <pre>
-    &lt;div class="card-panel hoverable"&gt; Hoverable Card Panel&lt;/div&gt;                        
+    &lt;div class="card-panel hoverable"&gt; Hoverable Card Panel&lt;/div&gt;
                     </pre>
                     </code>
 
@@ -263,6 +263,138 @@
                 </p>
             </div>
 
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2>Media</h2>
+
+                <p>
+                    <h3>Responsive Images</h3>
+                    <code>
+                        <pre>
+    &lt;img class="responsive-img" src="https://dummyimage.com/600x400/000/fff"&gt;
+                        </pre>
+                    </code>
+
+                    <img class="responsive-img" src="https://dummyimage.com/600x400/000/fff">
+                </p>
+
+                <p>
+                    <h3>Circular images</h3>
+                    <code>
+                        <pre>
+    &lt;div class="col s12 m8 offset-m2 l6 offset-l3"&gt;
+        &lt;div class="card-panel grey lighten-5 z-depth-1"&gt;
+          &lt;div class="row valign-wrapper"&gt;
+            &lt;div class="col s2"&gt;
+              &lt;img src="https://dummyimage.com/100x100/000/fff" alt="" class="circle responsive-img"&gt; &lt;!-- notice the "circle" class --&gt;
+            &lt;/div&gt;
+            &lt;div class="col s10"&gt;
+              &lt;span class="black-text"&gt;
+                This is a square image. Add the "circle" class to it to make it appear circular.
+              &lt;/span&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+                        </pre>
+                    </code>
+
+                    <div class="col s12 m8 offset-m2 l6 offset-l3">
+                        <div class="card-panel grey lighten-5 z-depth-1">
+                          <div class="row valign-wrapper">
+                            <div class="col s2">
+                              <img src="https://dummyimage.com/100x100/000/fff" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+                            </div>
+                            <div class="col s10">
+                              <span class="black-text">
+                                This is a square image. Add the "circle" class to it to make it appear circular.
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                </p>
+
+                <p>
+                    <h3>Videos</h3>
+                    <code>
+                        <pre>
+    &lt;div class="video-container"&gt;
+        &lt;iframe width="853" height="480" src="//www.youtube.com/embed/Q8TXgCzxEnw?rel=0" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+                        </pre>
+                    </code>
+
+                    <div class="video-container">
+                        <iframe width="853" height="480" src="//www.youtube.com/embed/Q8TXgCzxEnw?rel=0" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </p>
+
+                <p>
+                    <h3>Responsive Videos</h3>
+                    <code>
+                        <pre>
+&lt;video class="responsive-video" controls&gt;
+    &lt;source src="movie.mp4" type="video/mp4"&gt;
+&lt;/video&gt;
+                        </pre>
+                    </code>
+
+                    <video class="responsive-video" controls>
+                        <source src="movie.mp4" type="video/mp4">
+                    </video>
+                </p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2>Shadow</h2>
+
+                <p>
+                    <code>
+                        <pre>
+    &lt;div class="row"&gt;                            
+        &lt;div class="col s12 m2"&gt;
+          &lt;p class="z-depth-1"&gt;z-depth-1&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="col s12 m2"&gt;
+          &lt;p class="z-depth-2"&gt;z-depth-2&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="col s12 m2"&gt;
+          &lt;p class="z-depth-3"&gt;z-depth-3&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="col s12 m2"&gt;
+          &lt;p class="z-depth-4"&gt;z-depth-4&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="col s12 m2"&gt;
+          &lt;p class="z-depth-5"&gt;z-depth-5&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;                        
+                        </pre>
+                    </code>
+
+                    <div class="row">
+                        <div class="col s12 m2">
+                            <p class="z-depth-1">z-depth-1</p>
+                        </div>
+                        <div class="col s12 m2">
+                            <p class="z-depth-2">z-depth-2</p>
+                        </div>
+                        <div class="col s12 m2">
+                            <p class="z-depth-3">z-depth-3</p>
+                        </div>
+                        <div class="col s12 m2">
+                            <p class="z-depth-4">z-depth-4</p>
+                        </div>
+                        <div class="col s12 m2">
+                            <p class="z-depth-5">z-depth-5</p>
+                        </div>
+                    </div>
+                </p>
+            </div>
         </section>
 
         <?php include "../inc/_footer.php"; ?>
