@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cropper</title>
+    <link rel="stylesheet" href="css/cropper.min.css">
+    <style>
+        .container, #resultado {
+            width: 1000px;
+            height: 300px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            clear: both;
+        }
+
+        /* Limit image width to avoid overflow the container */
+        img {
+          max-width: 100%; /* This rule is very important, please do not ignore this! */
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          font-family: 'object-fit: cover;'
+        }
+
+        .col {
+            width: 24%;
+            float: left;
+            margin-right: 10px;
+        }
+
+        .preview-rs {
+            background: #ccc;
+            height: 160px;
+            float: left;
+            margin-right: 20px;
+            margin-bottom: 50px;
+            overflow: hidden;
+        }
+
+        .preview-lg {
+            width: 500px;
+        }
+
+        .preview-md {
+            width: 280px;
+        }
+
+        .preview-sm {
+            width: 160px;
+        }
+
+        h3 {
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>
+            <span class="col">
+                <a href="#imagemA" class="js-img">
+                    <img src="img/html5.png" alt="" id="imagemA" class="obj-fit">
+                </a>
+            </span>
+            <span class="col">
+                <a href="#imagemB" class="js-img">
+                    <img src="img/net.jpg" alt="" id="imagemB" class="obj-fit">
+                </a>
+            </span>
+            <span class="col">
+                <a href="#imagemC" class="js-img">
+                    <img src="img/arena.png" alt="" id="imagemC" class="obj-fit">
+                </a>
+            </span>
+            <span class="col">
+                <a href="#imagemD" class="js-img">
+                    <img src="img/auto.PNG" alt="" id="imagemD" class="obj-fit">
+                </a>
+            </span>
+        </p>
+    </div>
+
+    <h1>Crop Preview</h1>
+    <div class="container">
+      <img id="image-preview" src="img/foto.png">
+    </div>
+
+    <div class="container">
+        <h3>Preview</h3>
+        <div id="result-preview">
+            <div class="preview-lg preview-rs" id="result-crop-a"></div>
+            <div class="preview-md preview-rs" id="result-crop-b"></div>
+            <div class="preview-sm preview-rs" id="result-crop-c"></div>
+        </div>
+
+        <h3>Resultado</h3>
+        <p>
+            <button type="button" id="button-preview" class="js-cut">Crop</button>
+        </p>
+        <div id="resultado">
+
+        </div>
+    </div>
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/ofi.min.js"></script>
+    <script src="js/cropper.min.js"></script>
+    <script>
+        /***************************************************
+        ** Crop Preview
+        ***************************************************/
+        // function getRoundedCanvas(sourceCanvas) {
+        //     var canvas = document.createElement('canvas');
+        //     var context = canvas.getContext('2d');
+        //     var width = sourceCanvas.width;
+        //     var height = sourceCanvas.height;
+        //
+        //     canvas.width = width;
+        //     canvas.height = height;
+        //
+        //     context.imageSmoothingEnabled = true;
+        //     context.drawImage(sourceCanvas, 0, 0, width, height);
+        //     context.globalCompositeOperation = 'destination-in';
+        //     context.beginPath();
+        //     context.arc(width / 2, height / 2, Math.min(width, height) / 2, 0, 2 * Math.PI, true);
+        //     context.fill();
+        //
+        //     return canvas;
+        // }
+        var cropper;
+        window.addEventListener('DOMContentLoaded', function () {
+            var image = document.querySelector('#image-preview');
+            var previews = document.querySelectorAll('.preview-rs');
+            var button = document.getElementById('button-preview');
+            var resultA = document.getElementById('result-crop-a');
+            var resultB = document.getElementById('result-crop-b');
+            var resultC = document.getElementById('result-crop-c');
+            var croppable = false;
+            cropper = new Cropper(image, {
+                aspectRatio: 3.35,
+                // viewMode: 1,
+
+                ready: function () {
+                    croppable = true;
+                    previewCut();
+                },
+
+                crop: function (e) {
+                    previewCut();
+                }
+            });
+
+            var previewCut = function () {
+                var croppedCanvas;
+                // var roundedCanvas;
+                var roundedImage;
+
+                if (!croppable) {
+                    return;
+                }
+
+                // Crop
+                croppedCanvas = cropper.getCroppedCanvas();
+
+                // Round
+                // roundedCanvas = getRoundedCanvas(croppedCanvas);
+
+                // Show
+                roundedImage = document.createElement('img');
+                // roundedImage.src = roundedCanvas.toDataURL()
+                roundedImage.src = croppedCanvas.toDataURL()
+                resultA.innerHTML = '';
+                resultA.appendChild(roundedImage);
+                resultB.innerHTML = resultA.innerHTML;
+                resultC.innerHTML = resultA.innerHTML;
+
+                $(".preview-rs").find("img").addClass("obj-fit");
+                objectFitImages('img.obj-fit');
+            };
+        });
+
+        $(function(){
+            $(document).on("click", ".js-cut", function() {
+                $("#resultado").html($("#result-crop-a").html());
+            });
+        })
+        .on("click", ".js-img", function(e){
+            e.preventDefault();
+            //$("#image-preview").attr("src", $($(this).attr("href")).attr("src"));
+            cropper.replace($($(this).attr("href")).attr("src"));
+        });
+
+    </script>
+</body>
+</html>
