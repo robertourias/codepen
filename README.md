@@ -11,7 +11,7 @@
 | CSS | Compass Sprite | Sprite com compass |  |
 | CSS | Coração do like Twitter | Usando o valor steps do transition | [JSFiddle](http://jsfiddle.net/tableless/jk7zvh26/?utm_source=website&utm_medium=embed&utm_campaign=jk7zvh26) |
 | CSS | Navegação entre abas | Navegação sem javascript | [Codepen](http://codepen.io/robertourias/pen/BoyWxv) |
-| CSS | Parallax | Exemplo simples de parallax | [Codepen](http://codepen.io/robertourias/pen/wKbrRa)] |
+| CSS | Parallax | Exemplo simples de parallax | [Codepen](http://codepen.io/robertourias/pen/wKbrRa) |
 | CSS | Grid System | Estilização de um grid 12 colunas de forma simples | [Codepen](http://codepen.io/robertourias/pen/LRYWBY) |
 | CSS | ImagesTransition | Transição de imagens rotativas |  |
 | CSS | ITCSS | Estrutura de arquivos ITCSS |  |
