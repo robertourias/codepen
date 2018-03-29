@@ -13,6 +13,7 @@
 | CSS | Navegação entre abas | Navegação sem javascript | [Codepen](http://codepen.io/robertourias/pen/BoyWxv) |
 | CSS | Parallax | Exemplo simples de parallax | [Codepen](http://codepen.io/robertourias/pen/wKbrRa)] |
 | CSS | Grid System | Estilização de um grid 12 colunas de forma simples | [Codepen](http://codepen.io/robertourias/pen/LRYWBY) |
+| CSS | ImagesTransition | Transição de imagens rotativas |  |
 | CSS | ITCSS | Estrutura de arquivos ITCSS |  |
 | CSS | Tooltip | Formato CSS | [Codepen](http://codepen.io/robertourias/pen/ZbYejb) |
 | CSS | Transitions | Alguns exemplos de efeitos transitions | [Codepen](http://codepen.io/robertourias/pen/JKVPZq) |
