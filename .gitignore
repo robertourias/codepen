@@ -1,0 +1,64 @@
+# Especific Files #
+###################
+node_modules/
+
+
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Packages #
+############
+# it's better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite
+
+# OS generated files #
+######################
+npm-debug.log
+testem.log
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+#----------------------------------------------------------------------------
+# MISC
+#----------------------------------------------------------------------------
+/.sass-cache
+.*cache
+*.log
+cache/*
+backup
+_files
+log
+log/**/*
+.monitor
+
+# IDE FILES
+*.sublime-*
+*.tmproj
+
+# SASS
+*.sassc
