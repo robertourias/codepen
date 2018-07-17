@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AOS Next</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        .container {
+            width: 800px;
+            margin: 20px auto;
+            font-family: sans-serif;
+        }
+
+        .container > h1 {
+            margin: 200px 0;
+            text-align: center;
+        }
+
+        .container > div {
+            width: 300px;
+            margin: 40px 0;
+            clear: both;
+            float: left;
+        }
+
+        .container > .primeiro {
+            background: #2f61a6;
+        }
+
+        .container > .segundo {
+            float: right;
+            background: #f73061;
+        }
+
+        .container > .terceiro {
+            background: #47b19d;
+        }
+
+        .container > .quarto {
+            float: right;
+            background: #fb7d4a;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>AOS Next (Animações no Scroll)</h1>
+
+        <div class="primeiro" data-aos="fade-down-right">
+            <h1>Primeiro</h1>
+            <p>
+                Lorem Ipsum é simplesmente uma simulação de texto da indústria
+                tipográfica e de impressos, e vem sendo utilizado desde o século
+                XVI, quando um impressor desconhecido pegou uma bandeja de tipos
+                e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum
+                sobreviveu não só a cinco séculos, como
+            </p>
+        </div>
+
+        <div class="segundo" data-aos="flip-right">
+            <h1>Segundo</h1>
+            <p>
+                Lorem Ipsum é simplesmente uma simulação de texto da indústria
+                tipográfica e de impressos, e vem sendo utilizado desde o século
+                XVI, quando um impressor desconhecido pegou uma bandeja de tipos
+                e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum
+                sobreviveu não só a cinco séculos, como
+            </p>
+        </div>
+
+        <div class="terceiro" data-aos="zoom-in">
+            <h1>Terceiro</h1>
+            <p>
+                Lorem Ipsum é simplesmente uma simulação de texto da indústria
+                tipográfica e de impressos, e vem sendo utilizado desde o século
+                XVI, quando um impressor desconhecido pegou uma bandeja de tipos
+                e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum
+                sobreviveu não só a cinco séculos, como
+            </p>
+        </div>
+
+        <div class="quarto" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+            <h1>Quarto</h1>
+            <p>
+                Lorem Ipsum é simplesmente uma simulação de texto da indústria
+                tipográfica e de impressos, e vem sendo utilizado desde o século
+                XVI, quando um impressor desconhecido pegou uma bandeja de tipos
+                e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum
+                sobreviveu não só a cinco séculos, como
+            </p>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+</body>
+</html>
