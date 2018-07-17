@@ -1,0 +1,18 @@
+.container {
+    width: 500px;
+    margin: 40px auto;
+}
+
+form > div {
+    margin: 20px 0;
+}
+
+form label {
+    min-width: 100px;
+    display: inline-block;
+}
+
+form input {
+    border: 1px solid;
+    padding: 4px 10px;
+}
