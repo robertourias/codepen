@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Números para Megasena</title>
+
+    <style>
+    .ball{
+        width:50px;
+        height:50px;
+        border-radius:100%;
+        border: solid 1px black;
+        text-align:center;
+        margin: 24px;
+        padding: 0px;
+        float: left;
+        background-color:#cdcdcd;
+        display: none;
+    }
+
+    .container-megasena{
+        width:100%;
+        height:100px;
+    }
+
+    #clear{
+        clear:both;
+    }
+    </style>
+</head>
+<body>
+
+    <input type="button" id="button" value="Gerar valores / Raffle" onclick=megaSena()>
+    <input type="button" id="clear" value="Limpar valores / Clear" onclick=resetar()>
+
+    <div id="l0">
+        <div><input type="text" id="sort1a" class="ball"></div>
+        <div><input type="text" id="sort2a" class="ball"></div>
+        <div><input type="text" id="sort3a" class="ball"></div>
+        <div><input type="text" id="sort4a" class="ball"></div>
+        <div><input type="text" id="sort5a" class="ball"></div>
+        <div><input type="text" id="sort6a" class="ball"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+    <script>
+    function megaSena(){
+        var playedNumbers = 6;
+        var game = [];
+
+        for (i=0; i<playedNumbers; i++){
+            game[i] = Math.floor(Math.random()*60+1);}
+
+            for (i=0; i<playedNumbers; i++){
+                for(j=0;j<playedNumbers;j++){
+                    /* console.log("comparando "+i+" com "+j);*/
+                    if(game[i]===game[j] && i!==j){
+                        /*    console.log("repetiu o "+game[i]+" no "+game);*/
+                        game[j]= Math.floor(Math.random()*60+1);
+                        j=-1;i=0;
+                    }
+                }
+            }
+
+            for(i=1;i<=6;i++){
+                document.getElementById("sort"+i+"a").value=game[i-1];
+            }
+        }
+
+
+        $("#button").click(function(){
+            for(i=1;i<=6;i++){
+                $("#sort"+i+"a").fadeTo(1*i*500,1);
+            }
+        });
+
+
+        //function resetar()
+        $("#clear").click(function(){
+            for(i=1;i<=6;i++){
+                $("#sort"+i+"a").fadeTo(0.1*i*500,0);
+            }
+        });
+
+    </script>
+</body>
+</html>
