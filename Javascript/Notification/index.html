@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Notification</title>
+</head>
+<body>
+
+    <script type="text/javascript">
+        (function(){
+            if(Notification.permission !== 'granted') {
+                Notification.requestPermission();
+            }
+            else {
+                var notification = new Notification('Caixa de Notificação', {
+                    body: 'Olá Notificação',
+                    icon: 'http://www.tritone.com.br/_img/ico-whatsapp.png',
+                    //image: 'http://www.tritone.com.br/_img/ico-whatsapp.png',
+                    dir: 'rtl',
+                    lang: 'pt-BR',
+                    silent: false
+                });
+
+                notification.onclick = function(event) {
+                    window.location.href = 'http://www.google.com.br/';
+                };
+            }
+        })();
+    </script>
+</body>
+</html>
