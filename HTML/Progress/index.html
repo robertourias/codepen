@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Progress</title>
+    <style>
+    div {
+        margin: 10px 0;
+    }
+
+    progress[value] {
+        appearance: none;
+        -webkit-appearance: none;
+    }
+
+    progress[value]::-webkit-progress-bar {
+        background: #ccc;
+        border-radius: 5px;
+    }
+
+    progress[value]::-webkit-progress-value {
+        background: red;
+        border-radius: 5px;
+    }
+    </style>
+</head>
+<body>
+    <div>
+        <progress></progress>
+    </div>
+
+    <div>
+        <progress class="progress" value="35" max="100"></progress>
+    </div>
+
+
+</body>
+</html>
